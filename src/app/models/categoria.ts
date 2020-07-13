@@ -1,6 +1,6 @@
 export class Categoria {
     clave:string
-    fechaCreado: BigInteger 
+    fechaCreado: number 
     nombre : string
     activo: boolean = true
 

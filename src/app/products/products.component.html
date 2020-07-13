@@ -1,0 +1,32 @@
+<h1 class="center mt">Productos</h1>
+<div>
+  <form class="form auto-center">
+    <mat-form-field class="full-width">
+      <mat-label>Buscar</mat-label>
+      <input matInput placeholder="L01">
+      <mat-hint>Ingresa la clave del artículo</mat-hint>
+    </mat-form-field>
+  </form>
+</div>
+<div>
+  <h3 class="center mt-2">Lista de artículos</h3>
+  <button mat-fab class="auto-center" color="primary" aria-label="Añadir nuevo producto" routerLink="/create-product">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <div class="container">
+    <div class="card" *ngFor="let producto of products">
+
+      <h3>Clave: <span>{{producto.clave}}</span></h3>
+      <h3>Nombre: <span>{{producto.nombre}}</span></h3>
+      <h3>Categoría: <span>{{producto.categoria.clave}}</span></h3>
+      
+      <h3>Precios: <div *ngFor="let precio of producto.precios">{{precio.precio | currency}}</div></h3>
+      <h3>Estado activo: <span>{{producto.activo}}</span></h3>
+
+      <button mat-flat-button class="m-2" color="warn" (click)="deleteProduct(producto.id)">Eliminar</button>
+
+    </div>
+  </div>
+
+</div>

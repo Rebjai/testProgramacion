@@ -1,0 +1,36 @@
+.form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  .center{
+    text-align: center;
+  }
+  .mt{
+    margin-top: 1em;
+  }
+  .mt-2{
+    margin-top: 3em;
+  }
+  .auto-center{
+    display: block;
+    margin: 0 auto;
+  }
+  .full-width {
+      width: 100%;
+    }
+  h3 span{
+    font-size: .85em;
+  }
+  .card{
+    max-width: 400px;
+    display: inline;
+    margin: 1em;
+    padding: 2em;
+    background: rgb(189, 189, 189);
+    border-radius: 3%;
+    box-shadow: 2px 6px 4px #673ab6;
+  }
+  .container{
+    display: flex;
+  }

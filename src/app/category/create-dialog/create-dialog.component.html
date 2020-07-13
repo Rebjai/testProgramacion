@@ -1,0 +1,34 @@
+<h2 mat-dialog-title>
+    Crear nueva categoría
+</h2>
+<!-- clave:string
+    fechaCreado: number 
+    nombre : string
+    activo: boolean = true -->
+<div mat-dialog-content>
+
+    <mat-form-field>
+        <p>clave</p>
+        <mat-label>Clave</mat-label>
+        <input matInput type="text" [(ngModel)]="data.clave">
+    </mat-form-field>
+    <mat-form-field>
+        <p>Fecha de creación</p>
+        <mat-label>Fecha</mat-label>
+        <input matInput type="text" [(ngModel)]="data.fechaCreado">
+    </mat-form-field>
+    <mat-form-field>
+        <p>Nombre</p>
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" [(ngModel)]="data.nombre">
+    </mat-form-field>
+    <mat-form-field>
+        <p>Estado activo</p>
+        <mat-label>activo</mat-label>
+        <input matInput type="text" [(ngModel)]="data.activo">
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button >Cancelar</button>
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Ok</button>
+</div>

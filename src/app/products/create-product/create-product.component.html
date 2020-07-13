@@ -1,0 +1,44 @@
+<h2 class="text-align-center m-2">Crear nuevo producto</h2>
+<!-- clave:string
+    categoria:Categoria
+    nombre:string
+    precios: Array<Precio> 
+    activo: boolean  = true -->
+<div class="form-container">
+    <mat-form-field class="m-2">
+        <!-- <p>clave</p> -->
+        <mat-label>Clave</mat-label>
+        <input matInput type="text" [(ngModel)]="data.clave">
+    </mat-form-field>
+
+    <mat-form-field class="m-2" appearance="fill">
+        <mat-label>Categoria</mat-label>
+        <mat-select [(ngModel)]="data.categoria">
+            <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">
+                {{categoria.clave}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field class="m-2">
+        <!-- <p>Fecha de creación</p> -->
+        <mat-label>Nombre</mat-label>
+        <input matInput type="text" [(ngModel)]="data.nombre">
+    </mat-form-field>
+    <mat-form-field class="m-2">
+        <!-- <p>Fecha de creación</p> -->
+        <mat-label>Precios</mat-label>
+        <input matInput type="text" [(ngModel)]="listaPrecios">
+    </mat-form-field>
+    
+    <mat-form-field class="m-2" appearance="fill">
+        <mat-label>Estado activo</mat-label>
+        <mat-select [(ngModel)]="data.activo">
+          <mat-option *ngFor="let estado of estados" [value]="estado.value">
+            {{estado.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
+    <button mat-flat-button class="m-2" color="primary" (click)="createProduct()">Crear</button>
+</div>

@@ -1,0 +1,36 @@
+<h1 class="center mt">Categorías</h1>
+<div>
+  <form class="form auto-center">
+    <mat-form-field class="full-width">
+      <mat-label>Buscar</mat-label>
+      <input matInput placeholder="L01">
+      <mat-hint>Ingresa la clave de la categoría</mat-hint>
+      <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Please enter a valid email address
+          </mat-error> -->
+      <!-- <mat-error *ngIf="emailFormControl.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+    </mat-form-field>
+  </form>
+</div>
+<div>
+  <h3 class="center mt-2">Lista de categorías</h3>
+  <button mat-fab class="auto-center" color="primary" aria-label="Example icon button with a delete icon"
+    routerLink="/create-category">
+    <mat-icon>add</mat-icon>
+  </button>
+
+  <div class="container">
+    <div class="card" *ngFor="let categoria of categories">
+
+      <h3>Clave: <span>{{categoria.clave}}</span></h3>
+      <h3>Nombre: <span>{{categoria.nombre}}</span></h3>
+      <h3>Fecha de creación: <span>{{categoria.fechaCreado | date}}</span></h3>
+      <h3>Estado activo: <span>{{categoria.activo}}</span></h3>
+
+      <button mat-flat-button class="m-2" color="warn" (click)="deleteCategory(categoria.id)">Eliminar</button>
+    </div>
+  </div>
+
+</div>
