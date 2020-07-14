@@ -23,8 +23,12 @@
       
       <h3>Precios: <div *ngFor="let precio of producto.precios">{{precio.precio | currency}}</div></h3>
       <h3>Estado activo: <span>{{producto.activo}}</span></h3>
+      <div class="button-row">
 
-      <button mat-flat-button class="m-2" color="warn" (click)="deleteProduct(producto.id)">Eliminar</button>
+        <button mat-raised-button class="m-2" color="warn" (click)="deleteProduct(producto.id)">Eliminar</button>
+        <button mat-raised-button class="m-2" color="accent" [routerLink] = "['/products', producto.id]">Actualizar</button>
+        
+      </div>
 
     </div>
   </div>

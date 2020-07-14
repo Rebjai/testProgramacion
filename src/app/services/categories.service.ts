@@ -28,4 +28,7 @@ export class CategoriesService {
   handleError(){
 
   }
+  updateCategory(id, newval: Categoria){
+    return this.http.put<Categoria>(this.endpoit+"/"+id, newval)
+  }
 }

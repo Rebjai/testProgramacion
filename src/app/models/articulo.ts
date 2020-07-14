@@ -6,4 +6,5 @@ export class Articulo {
     nombre:string
     precios: Array<Precio> 
     activo: boolean  = true
+    id:number
 }

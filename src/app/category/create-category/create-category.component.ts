@@ -14,6 +14,7 @@ interface Estados {
 export class CreateCategoryComponent implements OnInit {
 
   data: Categoria= new Categoria
+  errors: []
   estados: Estados[] = [
     {value: true, viewValue: 'activo'},
     {value: false, viewValue: 'inactivo'},
@@ -22,10 +23,14 @@ export class CreateCategoryComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  createCategory(){
-    console.log("creating new category");
+  async createCategory(){
+    console.log("creating new category: ",this.data);
+
+    await this.categoriesService.createCategory(this.data).subscribe(err=>console.log(err), err => console.log(this.errors = err.error.errores))
+  }
+  logDate(){
+    console.log(this.data.fechaCreado);
     
-    this.categoriesService.createCategory(this.data).subscribe(err=>console.log(err))
   }
 
 }

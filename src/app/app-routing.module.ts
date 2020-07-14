@@ -4,6 +4,7 @@ import { CategoryComponent } from './category/category.component';
 import { ProductsComponent } from './products/products.component';
 import { CreateCategoryComponent } from './category/create-category/create-category.component';
 import { CreateProductComponent } from './products/create-product/create-product.component';
+import { UpdateProductComponent } from './products/update-product/update-product.component';
 
 
 const routes: Routes = [
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'categories', component: CategoryComponent },
   { path: 'create-category', component: CreateCategoryComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'create-product', component: CreateProductComponent }
+  { path: 'create-product', component: CreateProductComponent },
+  { path: 'products/:productId', component: UpdateProductComponent },
 ];
 
 @NgModule({

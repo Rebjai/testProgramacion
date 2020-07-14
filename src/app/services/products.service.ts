@@ -23,4 +23,11 @@ export class ProductsService {
     let id = idc
     return this.http.delete(this.endpoit+"/"+id)
   }
+  getAProduct(num : number) {
+
+    return this.http.get<Articulo>(this.endpoit+"/"+num)
+  }
+  updateProduct(id, newval: Articulo){
+    return this.http.put<Articulo>(this.endpoit+"/"+id, newval)
+  }
 }

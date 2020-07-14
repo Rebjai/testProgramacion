@@ -3,5 +3,5 @@ export class Categoria {
     fechaCreado: number 
     nombre : string
     activo: boolean = true
-
+    id: number
 }

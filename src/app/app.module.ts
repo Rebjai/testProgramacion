@@ -21,6 +21,10 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { CreateCategoryComponent } from './category/create-category/create-category.component';
 import {MatSelectModule} from '@angular/material/select';
 import { CreateProductComponent } from './products/create-product/create-product.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { UpdateProductComponent } from './products/update-product/update-product.component';
+import { UpdateCategoryComponent } from './category/update-category/update-category.component';
 // import { CreateDialogComponent } from './category/create-dialog/create-dialog.component';
 
 
@@ -32,6 +36,8 @@ import { CreateProductComponent } from './products/create-product/create-product
     ProductListComponent,
     CreateCategoryComponent,
     CreateProductComponent,
+    UpdateProductComponent,
+    UpdateCategoryComponent,
     // CreateDialogComponent
   ],
   imports: [
@@ -46,7 +52,9 @@ import { CreateProductComponent } from './products/create-product/create-product
     MatInputModule,
     MatFormFieldModule,
     MatDialogModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   // entryComponents:[CreateDialogComponent],
